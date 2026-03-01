@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Element Remover",
+  "version": "1.0",
+  "description": "Remove annoying HTML elements from any webpage",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Element Remover (click to activate)"
+  },
+  "icons": {},
+  "background": {
+    "service_worker": "background.js"
+  }
+}

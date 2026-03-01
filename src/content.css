@@ -1,0 +1,53 @@
+/* Crosshair cursor when active */
+.element-remover-active,
+.element-remover-active * {
+  cursor: crosshair !important;
+}
+
+/* Highlight hovered element */
+.element-remover-target {
+  outline: 2px solid #ff3333 !important;
+  outline-offset: -2px;
+  background-color: rgba(255, 50, 50, 0.12) !important;
+  transition: none !important;
+}
+
+/* Remove animation */
+@keyframes element-remover-poof {
+  0%   { transform: scale(1); opacity: 1; filter: none; }
+  30%  { transform: scale(1.04) rotate(1deg); opacity: 0.8; filter: blur(1px); }
+  100% { transform: scale(0.3) rotate(-8deg) translateY(-30px); opacity: 0; filter: blur(6px); }
+}
+
+.element-remover-poof {
+  animation: element-remover-poof 0.3s ease-in forwards !important;
+  pointer-events: none !important;
+}
+
+/* Banner */
+.element-remover-banner {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  font: 13px/1.4 system-ui, sans-serif;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid #ff3333;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.92;
+}
+
+.element-remover-banner kbd {
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 12px;
+  margin: 0 2px;
+}
